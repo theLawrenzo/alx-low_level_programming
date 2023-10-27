@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
- * _isdigit - Function that checks for digit
+ * _isalpha - Function that checks for digit
  * @c: character to check
  *
  * Return: 1 if c is digit
