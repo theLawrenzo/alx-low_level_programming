@@ -18,7 +18,7 @@ int main(int argc, __attribute__((unused))char *argv[])
 		printf("%d\n", len);
 		return (0);
 	}
-	
+
 	while (argc)
 	{
 		if (argc > 0)
