@@ -8,13 +8,15 @@
  */
 int _atoi(char *s)
 {
-	int num;
+	int i, num;
 
+	i = 0;
 	num = 0;
 
 	while (*(s + i))
 	{
 		num += (int)*(s + i);
+		i++;
 	}
 
 	return (num);
