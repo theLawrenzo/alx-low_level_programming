@@ -35,7 +35,7 @@ char *_strcat(char *dest, char *src)
 	len = _strlen(dest);
 	while (*(src + i))
 	{
-		*(dest + len++) = *(src + i);
+		*(dest + len + i) = *(src + i);
 		i++;
 	}
 	return (dest);
