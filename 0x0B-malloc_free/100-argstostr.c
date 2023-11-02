@@ -29,7 +29,7 @@ int _strlen(char *str)
 char *argstostr(int ac, char **av)
 {
 	char *str;
-	int i, j, len;
+	int i, j, k, len;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -48,14 +48,21 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	i = 0;
-	while (i < len)
+	k = 0;
+	while (i < ac)
 	{
+		j = 0;
 		while (*(av + j))
 		{
-			*(str + i) = *(*(av + i) + j);
-			*(str + i) = '\n';
+			*(str + k) = *(*(av + i) + j);
 			j++;
+			k++;
 		}
+		*(str + k) = '\n';
 		i++;
 	}
+
+	*(str + k) = '\0';
+
+	return (str);
 }
