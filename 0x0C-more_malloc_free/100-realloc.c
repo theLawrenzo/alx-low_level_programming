@@ -19,7 +19,7 @@ void _strcpy(int *dest, char *src)
 }
 
 /**
- * _ralloc - Function that reallocates a memory block using malloc
+ * _realloc - Function that reallocates a memory block using malloc
  * @ptr: Pointer to old memory block
  * @old_size: Size of old memory block
  * @new_size: Size to be allocated for new block
