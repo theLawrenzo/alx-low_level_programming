@@ -11,12 +11,14 @@
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
+	void (*fptr)(int);
 	size_t i;
 
+	fptr = action;
 	i = 0;
 	while (i < size)
 	{
-		action(*(array + i));
+		fptr(*(array + i));
 		i++;
 	}
 }
