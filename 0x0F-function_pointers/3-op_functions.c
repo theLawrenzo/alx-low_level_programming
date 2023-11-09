@@ -49,7 +49,7 @@ int op_div(int a, int b)
 }
 
 /**
- * oo_mod - Function that returns the reamainder from the division
+ * op_mod - Function that returns the reamainder from the division
  * of a by b
  * @a: First integer operand
  * @b: Second integer operand

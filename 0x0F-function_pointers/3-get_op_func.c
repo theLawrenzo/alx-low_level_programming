@@ -4,8 +4,6 @@
  * get_op_func - Function that selects the right function to perform
  * an operation
  * @s: Pointer to the character for the evaluation
- * @a: First integer value
- * @b: Second integer value
  *
  * Return: A function that corresponds to the character passed
  */
