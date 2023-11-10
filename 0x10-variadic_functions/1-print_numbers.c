@@ -1,4 +1,4 @@
-#include "variadic_funcions.h"
+#include "variadic_functions.h"
 
 /**
  * print_numbers - Function that prints numbers, followed by a
@@ -10,4 +10,25 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
+	unsigned int i;
+	va_list list;
+
+	i = 0;
+	va_start(list, n);
+
+	while (i < n)
+	{
+		printf("%d", va_arg(list, unsigned int));
+		if (i < (n - 1) && separator != NULL)
+		{
+			printf("%s", separator);
+		}
+		else
+		{
+			i++;
+			continue;
+		}
+		i++;
+	}
+	putchar('\n');
 }
