@@ -9,4 +9,17 @@
  */
 int sum_them_all(const unsigned int n, ...)
 {
+	unsigned int i, sum;
+	va_list list;
+
+	i = 0;
+	sum = 0;
+	va_start(list, n);
+	while (i < n)
+	{
+		sum += va_arg(list, unsigned int);
+		i++;
+	}
+
+	return (sum);
 }
