@@ -9,13 +9,18 @@
  */
 size_t print_listint(const listint_t *h)
 {
+	const listint_t *tmp;
 	size_t sum;
 
+	tmp = h;
 	sum = 0;
-	while (h)
+	if (tmp == NULL)
+		return (0);
+
+	while (tmp)
 	{
-		printf("%d\n", h->n);
-		h = h->next;
+		printf("%d\n", tmp->n);
+		tmp = tmp->next;
 		sum++;
 	}
 	return (sum);
