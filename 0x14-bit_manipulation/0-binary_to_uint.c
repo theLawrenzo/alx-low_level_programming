@@ -1,22 +1,25 @@
 #include "main.h"
 
 /**
- * binary_to_uint - Convert a bit string to an integer
- * @b: Bit string
+ * binary_to_uint - converts a binary number to unsigned int
+ * @b: string containing the binary number
  *
- * Return: num
+ * Return: the converted number
  */
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
-	unsigned int tmp, num;
+	unsigned int dec_val = 0;
 
-	if (*b > 49)
+	if (!b)
 		return (0);
-	if (*b < 48)
-		return (0);
-	tmp = *b;
-	num = tmp * (unsigned int)(pow(2, (unsigned int)strlen(b)));
-	num += binary_to_uint(b - 1);
-	return (num);
+
+	for (i = 0; b[i]; i++)
+	{
+		if (b[i] < '0' || b[i] > '1')
+			return (0);
+		dec_val = 2 * dec_val + (b[i] - '0');
+	}
+
+	return (dec_val);
 }
