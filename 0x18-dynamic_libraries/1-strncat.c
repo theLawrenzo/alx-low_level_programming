@@ -6,7 +6,7 @@
  *
  * Return: len
  */
-int _strlen(char *s)
+/*int _strlen(char *s)
 {
 	int len;
 
@@ -20,6 +20,7 @@ int _strlen(char *s)
 	return (len);
 }
 
+*/
 
 /**
  * _strncat - Function that concatenates two strings

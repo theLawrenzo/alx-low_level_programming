@@ -1,23 +1,20 @@
 #include "main.h"
 
 /**
- * _strlen - Function that find the length of a string
- * @s: String value
+ * find_len - finds the lenght of a string
+ * @s: The string
  *
  * Return: len
  */
-int _strlen(char *s)
+int find_len(char *s)
 {
 	int len;
 
 	len = 0;
-	while (*s)
-	{
+	while (*(s++))
 		len++;
-		s++;
-	}
 
-	return (len);
+	return (0);
 }
 
 /**
@@ -32,7 +29,7 @@ char *_strcat(char *dest, char *src)
 	int i, len;
 
 	i = 0;
-	len = _strlen(dest);
+	len = find_len(dest);
 	while (*(src + i))
 	{
 		*(dest + len + i) = *(src + i);
