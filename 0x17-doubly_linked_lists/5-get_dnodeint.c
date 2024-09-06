@@ -7,16 +7,17 @@
  *
  * Return: NULL if node does not exist
  */
-dlistint_t *get_nodeint_at_index(dlistint_t *head, unsigned int index)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *tmp = head;
 	unsigned int i = 0;
 
 	while (tmp != NULL)
 	{
-		i++;
 		if (index == i)
 			return (tmp);
+
+		i++;
 		tmp = tmp->next;
 	}
 	if (index > i)
