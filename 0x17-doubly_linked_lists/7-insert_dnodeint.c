@@ -2,7 +2,7 @@
 
 /**
  * dll_len - Returns the length of a dll
- * @head: Pointer to the starting node
+ * @h: Pointer to the starting node
  *
  * Return: len
  */
