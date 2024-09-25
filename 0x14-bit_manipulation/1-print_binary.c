@@ -1,26 +1,22 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary equivalent of a decimal number
- * @n: number to print in binary
+ * print_binary - Prints the bin rep. of a dec. num
+ * @n: Decimal number
+ *
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	int i, count = 0;
-	unsigned long int current;
+	int i = n;
 
-	for (i = 63; i >= 0; i--)
+	if (i == 0)
+		printf("0");
+	else if (i == 1)
+		printf("1");
+	else
 	{
-		current = n >> i;
-
-		if (current & 1)
-		{
-			_putchar('1');
-			count++;
-		}
-		else if (count)
-			_putchar('0');
+		print_binary(i >> 1);
+		printf("%d", i & 1);
 	}
-	if (!count)
-		_putchar('0');
 }
