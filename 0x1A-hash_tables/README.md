@@ -561,7 +561,7 @@ Before you continue, please take a moment to think about it: how you would imple
 
 For this task, please:
 
-    Read PHP Internals Book: HashTable
+    Read PHP Internals Book: HashTable --link--(https://intranet.alxswe.com/rltoken/SIdpN9PE_9aYBCHUGPX-fw)
     Use the same hash function
     Use these data structures:
 
